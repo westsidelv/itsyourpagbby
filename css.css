@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(135deg, #fd91df 0%, #ffb9f3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+}
+.cuando{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.50em;
+
+}
+.login {
+    border: 5px solid #f17ee8; /* Morado claro */
+    border-radius: 24px;
+    padding: 32px 24px;
+    background: #fae4f5;
+    box-shadow: 0 10px 32px rgba(175, 65, 142, 0.336);
+    width: 320px;
+    z-index: 10;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login::before {
+    content: "💗";
+    font-size: 48px;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
+}
+
+label {
+    font-size: 1.2em;
+    color: #f755ea;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    margin-top: 20px; /* Baja el texto */
+}
+
+input[type="text"] {
+    border: 2px solid #f782ed;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #f755ea;
+}
+
+button {
+    background: linear-gradient(90deg, #fc84ec 0%, #fbc2eb 100%);
+    color: #fff;
+    border-color: #f89df1;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(245, 117, 202, 0.411);
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #f755e1 0%, #fbc2eb 100%);
+}
+
+#mensaje {
+    margin-top: 18px;
+    font-size: 1.1em;
+    color: #f755ea;
+    font-weight: bold;
+    text-align: center;
+    min-height: 24px;
+    font-family: 'Pacifico', cursive;
+}
+
+form#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px; /* Agrega espacio arriba para evitar que el texto suba */
+}
+
+.kitty-imgs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px; /* Baja más las fotos */
+}
+
+.kitty {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.foto {
+    position: absolute;
+    width: 80px; /* Tamaño base */
+    animation: caer 5s linear forwards; /* Animación de caída */
+}
+
+@keyframes caer {
+    0% {
+        top: -90px;
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+} 
