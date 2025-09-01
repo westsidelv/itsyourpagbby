@@ -10,12 +10,13 @@ const frases = [
     "Cada momento contigo es especial",
     "FELICIDADES MI AMOR 💖"
 ];
+const song = document.getElementById('song');
+const playButton = document.getElementById('playButton');
+playButton.addEventListener('click', () => {
+    song.play();
+    playButton.disabled = true; // Opcional: deshabilita el botón después de reproducir
+});
 
-window.addEventListener("load", () => {
-      const audios = document.getElementById("song");
-      audios.play();
-        audios.volume = 1.0; // Ajusta el volumen (0.0 a 1.0)
- });
 function crearFrase() {
     const frase = document.createElement('div');
     frase.className = 'frase';
